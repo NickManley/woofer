@@ -1,0 +1,73 @@
+html { 
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background: #F9F9F9;
+    font-family: arial, sans-serif;
+    font-size: 12pt!important;
+    height: calc(100% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+}
+.sidebar {
+    background: #EFEFEF;
+    border: #AAA solid 1px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    height: calc(100% - 120px);
+    margin-top: 20px;
+    padding: 10px;
+    width: 200px;
+}
+.mainbox {
+    background: #EEE;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-left: 220px;
+    margin-top: 20px;
+    padding: 0px;
+    width: calc(100% - 240px);
+}
+.woof-display-box {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #FFF;
+    border: #CCC solid 1px;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+.woof-avatar {
+    float: left;
+    height: 100%;
+    margin: 10px;
+    
+}
+.woof-username {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.woof-username a {
+    color: #555555;
+}
+.sidebar-section {
+    margin-bottom: 25px;
+}
+.sidebar-section-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    margin-bottom: 0.5em;
+}
+.errorText {
+    color: #FF0000;
+    margin: 0 auto;
+}

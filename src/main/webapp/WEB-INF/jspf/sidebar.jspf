@@ -1,0 +1,51 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<div class="sidebar">
+    <div class="sidebar-section-title">Search Woofs</div>
+    <div class="woofer-search-form-outer sidebar-section">
+        <form method="GET" class="woofer-search-form">    
+            <input type="text" class="woofer-search-input" name="query"
+                   placeholder="search"/> 
+            <input type="submit" id="woofer-search-submit" value="" /> 
+        </form>
+    </div>
+    <c:choose>
+        <c:when test="${user != null}">
+            <div class="sidebar-section-title"><c:out value="${user.username}"/></div>
+            <div class="sidebar-section">
+                <img src="/avatar/${fn:escapeXml(user.username)}" alt="avatar"
+                     style="float: left; margin-right: 10px;"/>
+                <div style="font-size: 13px;">
+                    Woofs: <c:out value="${messageCount}"/><br/>
+                    <a href="/changeAvatar">Change Avatar</a><br/>
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
+        </c:when>
+        <c:otherwise>
+            <div class="sidebar-section-title">Login</div>
+            <div class="sidebar-section">
+                
+                <form:form commandName="loginForm" name="loginForm"
+                           action="/login" method="POST">
+                    <input type="text" class="woofer-input-text" name="username"
+                           placeholder="username"/>
+                    <input type="password" class="woofer-input-text" name="password"
+                           placeholder="password"/>
+                    <div style="text-align: center;">
+                        <a href="/register" class="woofer-gray-button">Register</a>
+                        <input type="submit" class="woofer-blue-button" value="Login"/>
+                    </div>
+                </form:form>
+            </div>
+        </c:otherwise>
+    </c:choose>
+    
+    <div class="sidebar-section-title">About Woofer</div>
+    <div class="sidebar-section" style="font-size: 13px; font-family: 'Open Sans', sans-serif">
+        If birds tweet, then dogs woof. Woofer is a twitter clone
+        aimed to show my skill set with Spring MVC and HTML/CSS.
+    </div>
+</div>

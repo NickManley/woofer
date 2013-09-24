@@ -1,0 +1,24 @@
+.woofer-input-text {
+    background: #E9E9E9;
+    border: #AAA 1px solid;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    height: 1.5em;
+    margin: 0.1em;
+    width: 170px;
+}
+#woofer-textarea {
+    background: #F9F9F9;
+    border: #AAA 1px solid;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    height: 50px;
+    margin: 0.1em;
+    width: 500px;
+}
